@@ -1,6 +1,7 @@
 package com.client.demo;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -15,10 +16,14 @@ public class ClientApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ClientApplication.class, args);
+        System.out.println("启动成功");
     }
+
+    @Value("${server.port}")
+    String port;
 
     @RequestMapping("/hi")
     public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
-        return "hi " + name;
+        return "hi " + name +"端口"+ port;
     }
 }

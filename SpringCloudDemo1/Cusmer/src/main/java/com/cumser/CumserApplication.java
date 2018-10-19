@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class CumserApplication {
     public static void main(String[] args) {
         SpringApplication.run(CumserApplication.class,args);
+        System.out.println("启动成功");
     }
     @Bean
     @LoadBalanced
