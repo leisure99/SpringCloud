@@ -20,6 +20,7 @@
         <module>Server</module>
         <module>Cusmer</module>
         <module>spring-feign</module>
+        <module>spring-zuul</module>
     </modules>
 
     <properties>
